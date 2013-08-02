@@ -2,6 +2,8 @@ package com.spinoco.consultation
 
 import org.specs2.Specification
 import org.specs2.specification.Fragments
+import akka.actor.{ActorSystem, Props}
+import org.specs2.matcher.MatchResult
 
 /**
  * @author jakub.ryska
@@ -15,7 +17,12 @@ class SpinocoArchitectureSpec extends Specification {
       Gateway should notify the client
     """
 
-  def clientRequestToGateway = {
+  def clientRequestToGateway:MatchResult[Any] = {
+    val as = ActorSystem("testActorSystem")
+    val connector = as.actorOf(Props[ConnectorActor])
+    val operator = as.actorOf(Props[OperatorActor])
+    connector ! AddOperator("op1", operator)
+    connector ! MakeCall("op1", "777 123 456")
     ???
   }
 }
