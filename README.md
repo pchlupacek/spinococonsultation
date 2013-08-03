@@ -8,14 +8,14 @@ solution with Streams.
 
 The communication workflow is as follows:
 
-`
+```
 +-----------------+          +-----------------+           +-----------------+             +----------------+
 |                 |  ====>   |                 | ======>   |                 |  ========>  |                |
 |    Connector    |          |     Operator    |           |    Gateway      |             |  External S.   |
 |                 |  <====   |                 | <======   |                 |  <========  |                |
 +-----------------+          +-----------------+           +-----------------+             +----------------+
 
-`
+```
 
 
 The idea is to model at minimum at least Operator and gateway as Pure processes , and ancapsulate Connector 
