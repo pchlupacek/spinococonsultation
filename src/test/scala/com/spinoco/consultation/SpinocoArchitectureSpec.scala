@@ -4,6 +4,7 @@ import org.specs2.Specification
 import org.specs2.specification.Fragments
 import akka.actor.{ActorSystem, Props}
 import org.specs2.matcher.MatchResult
+import com.spinoco.consultation.external.{MakeCall, AddOperator, ConnectorActor}
 
 /**
  * @author jakub.ryska
