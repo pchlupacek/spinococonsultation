@@ -18,7 +18,7 @@ The communication workflow is as follows:
 ```
 
 
-The idea is to model at minimum at least Operator and gateway as Pure processes , and ancapsulate Connector 
+The idea is to model at minimum at least Operator and gateway as Pure processes , and encapsulate Connector 
 and External System in Processes
 
 The important part is that Operator holds that state that is updated in both directions. 
